@@ -1,0 +1,5 @@
+en:
+  api:
+    welcome:
+      message: 'This is just sample welcome endpoint :)'
+      title: 'Welcome to JustCarsAPI'

@@ -11,6 +11,10 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'puma', '~> 4.3.0'
 
+# API
+
+gem 'grape'
+
 group :development do
   gem 'letter_opener'
   gem 'listen', '>= 3.0.5', '< 3.2'
