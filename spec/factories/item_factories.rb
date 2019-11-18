@@ -3,6 +3,10 @@ FactoryBot.define do
     price { 1 }
     title { 'Title' }
     description { 'Description' }
-    image { 'image' }
+    image do
+      Rack::Test::UploadedFile.new(
+        File.join(Rails.root, 'spec', 'support', 'images', 'test.jpg')
+      )
+    end
   end
 end

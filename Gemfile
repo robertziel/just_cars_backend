@@ -17,6 +17,12 @@ gem 'grape'
 gem 'grape-swagger'
 gem 'grape-swagger-rails'
 
+# Images
+
+gem 'carrierwave'
+gem 'carrierwave-imageoptimizer'
+gem 'mini_magick'
+
 group :development do
   gem 'letter_opener'
   gem 'listen', '>= 3.0.5', '< 3.2'

@@ -11,7 +11,9 @@
 
 2. And **PostgreSQL** running
 
-3. Then:
+3. To process images **imagemagick** is required
+
+4. Then:
   ```
   bundle install
 
@@ -21,7 +23,7 @@
   rails s
   ```
 
-4. Your app should be available in `localhost:3000`
+5. Your app should be available in `localhost:3000`
 
 ## Before commit
 
