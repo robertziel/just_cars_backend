@@ -14,6 +14,8 @@ gem 'puma', '~> 4.3.0'
 # API
 
 gem 'grape'
+gem 'grape-swagger'
+gem 'grape-swagger-rails'
 
 group :development do
   gem 'letter_opener'
