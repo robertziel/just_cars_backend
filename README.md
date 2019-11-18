@@ -41,3 +41,9 @@
   ```
 
 3. Then you can commit your changes!
+
+
+## To do
+
+* It'd be nice to implement **pagination in ItemsApi#index**
+* If the application is expected to be developed further it's better to use API versioning

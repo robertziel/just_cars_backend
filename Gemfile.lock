@@ -37,6 +37,11 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
+    active_model_serializers (0.10.10)
+      actionpack (>= 4.1, < 6.1)
+      activemodel (>= 4.1, < 6.1)
+      case_transform (>= 0.2)
+      jsonapi-renderer (>= 0.1.1.beta1, < 0.3)
     activejob (6.0.1)
       activesupport (= 6.0.1)
       globalid (>= 0.3.6)
@@ -73,6 +78,8 @@ GEM
     carrierwave-imageoptimizer (1.4.0)
       carrierwave (>= 0.8, < 2.0)
       image_optimizer (~> 1.6)
+    case_transform (0.2)
+      activesupport
     coderay (1.1.2)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
@@ -106,6 +113,7 @@ GEM
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
     image_optimizer (1.8.0)
+    jsonapi-renderer (0.2.2)
     launchy (2.4.3)
       addressable (~> 2.3)
     letter_opener (1.7.0)
@@ -241,6 +249,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers
   bootsnap (>= 1.1.0)
   carrierwave
   carrierwave-imageoptimizer

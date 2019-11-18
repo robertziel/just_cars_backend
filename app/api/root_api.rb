@@ -1,6 +1,9 @@
 class RootApi < Grape::API
   format :json
 
+  helpers SerializersHelper
+
+  mount ItemsApi
   mount WelcomeApi
 
   add_swagger_documentation(

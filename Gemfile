@@ -13,6 +13,7 @@ gem 'puma', '~> 4.3.0'
 
 # API
 
+gem 'active_model_serializers'
 gem 'grape'
 gem 'grape-swagger'
 gem 'grape-swagger-rails'
