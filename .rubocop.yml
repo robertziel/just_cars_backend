@@ -17,6 +17,7 @@ ClassAndModuleChildren:
 
 Metrics/BlockLength:
   Exclude:
+    - 'app/api/**/*'
     - 'db/migrate/**/*'
     - 'config/**/*'
     - 'spec/**/*.rb'

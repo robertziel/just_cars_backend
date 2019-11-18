@@ -32,4 +32,40 @@ describe ItemsApi do
       expect(json).to eq serialize(item, serializer: Api::ItemSerializer)
     end
   end
+
+  describe '#CREATE' do
+    let(:item_attributes) { attributes_for(:item) }
+
+    subject do
+      post '/api/items', params: item_attributes
+    end
+
+    context 'succeeded' do
+      it 'should be success' do
+        subject
+        expect(response.status).to eq 200
+      end
+
+      it 'should add new item' do
+        expect { subject }.to change { Item.count }.by(1)
+      end
+    end
+
+    context 'did not succeeded' do
+      before do
+        item_attributes[:title] = nil
+      end
+
+      it 'should be unauthorized' do
+        subject
+        expect(response.status).to eq 401
+      end
+
+      it 'should return error message' do
+        subject
+        json = JSON.parse(response.body, symbolize_names: true)
+        expect(json[:error_messages]).not_to be_nil
+      end
+    end
+  end
 end
