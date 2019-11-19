@@ -1,8 +1,13 @@
 class ItemsApi < Grape::API
   resource :items do
     desc 'Index'
+    params do
+      optional :title, type: String
+      optional :price_from, type: BigDecimal
+      optional :price_to, type: BigDecimal
+    end
     get do
-      items = Item.all
+      items = ItemsSearchService.new(params).perform
       {
         items: serialize_collection(items, serializer: Api::ItemSerializer, index: true)
       }
