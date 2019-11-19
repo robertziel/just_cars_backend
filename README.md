@@ -20,10 +20,10 @@
   rake db:create
   rake db:migrate
 
-  rails s
+  rails s -p 8080
   ```
 
-5. Your app should be available in `localhost:3000`
+5. Your app should be available `localhost:8080`
 
 ## Before commit
 
@@ -41,6 +41,9 @@
   ```
 
 3. Then you can commit your changes!
+
+## ENV
+`CORS_ALLOWED_ORIGINS` - if empty `localhost:3000` is used as default
 
 
 ## To do
