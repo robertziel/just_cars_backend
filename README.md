@@ -3,7 +3,7 @@
 ## About API
 
 * Grape API: `/api`
-* Swagger documentation: `/api/docs`
+* Swagger documentation: `/api/docs` **(new items can be added here via POST /items endpoint)**
 
 ## Set up locally
 
