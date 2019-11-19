@@ -19,10 +19,6 @@ gem 'grape-swagger'
 gem 'grape-swagger-rails'
 gem 'rack-cors'
 
-# Filtering
-
-gem 'ransack'
-
 # Images
 
 gem 'carrierwave'
