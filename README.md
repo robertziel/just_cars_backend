@@ -32,7 +32,7 @@ Frontend repository: https://github.com/robertziel/just_cars_react_client
 1. Set up **overcommit** to make sure yuur code is clean :) :
 
   ```
-  gem install
+  gem install overcommit
   bundle install --gemfile=.overgems.rb
   overcommit --install
   ```
