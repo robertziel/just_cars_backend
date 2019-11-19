@@ -32,7 +32,7 @@ class ItemsApi < Grape::API
       requires :title, type: String
     end
     post do
-      item = Item.new(params)
+      item = Item.new(declared(params, include_missing: false))
       if item.save
         status 200
         serialize(item, serializer: Api::ItemSerializer)

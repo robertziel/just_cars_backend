@@ -34,7 +34,7 @@ describe ItemsApi do
   end
 
   describe '#CREATE' do
-    let(:item_attributes) { attributes_for(:item) }
+    let(:item_attributes) { attributes_for(:item).merge(blue: 'aaa') }
 
     subject do
       post '/api/items', params: item_attributes
