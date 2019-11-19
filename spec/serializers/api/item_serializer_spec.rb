@@ -11,10 +11,11 @@ describe Api::ItemSerializer do
 
       it 'serializes item' do
         expect(subject).to match(
+          description: item.description,
           id: item.id,
-          title: item.title,
           image: item.image.search.url,
-          description: item.description
+          price: "#{item.price} $",
+          title: item.title
         )
       end
     end
@@ -27,8 +28,9 @@ describe Api::ItemSerializer do
       it 'serializes item' do
         expect(subject).to match(
           id: item.id,
-          title: item.title,
-          image: item.image.search.url
+          image: item.image.search.url,
+          price: "#{item.price} $",
+          title: item.title
         )
       end
     end

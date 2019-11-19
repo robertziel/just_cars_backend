@@ -1,6 +1,6 @@
 module Api
   class ItemSerializer < ApplicationSerializer
-    attributes :id, :title, :image
+    attributes :id, :image, :price, :title
     attribute :description, unless: :index?
 
     def image
@@ -9,6 +9,10 @@ module Api
 
     def index?
       instance_options[:index]
+    end
+
+    def price
+      "#{object.price} $"
     end
   end
 end
