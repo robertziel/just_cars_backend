@@ -6,8 +6,13 @@ class ItemImageUploader < CarrierWave::Uploader::Base
     "#{super}/item/#{mounted_as}/#{model.id}"
   end
 
+  version :full do
+    process resize_to_fill: [1216, 600]
+    process optimize: [{ quiet: true }]
+  end
+
   version :search do
-    process resize_to_fill: [490, 310]
+    process resize_to_fill: [390, 250]
     process optimize: [{ quiet: true }]
   end
 

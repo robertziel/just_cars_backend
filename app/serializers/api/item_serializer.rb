@@ -4,7 +4,10 @@ module Api
     attribute :description, unless: :index?
 
     def image
-      object.image.search.url
+      {
+        full: object.image.full.url,
+        search: object.image.search.url
+      }
     end
 
     def index?
